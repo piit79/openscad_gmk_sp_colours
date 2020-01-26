@@ -6,13 +6,11 @@ from data from the excellent [Keyboard Layout Editor](https://github.com/ijprest
 project.
 
 ## Usage
-Simply run the script [kle2openscad.py](https://github.com/piit79/openscad_gmk_sp_colours/blob/master/kle2openscad.py)
-using Python 3:
+Simply clone this repository to your project and run the script [kle2openscad.py](https://github.com/piit79/openscad_gmk_sp_colours/blob/master/kle2openscad.py)
+using Python 3 (the script has no external dependencies):
 ```shell script
-./kle2openscad.py
-```
-or
-```shell script
+git clone https://github.com/piit79/openscad_gmk_sp_colours.git
+cd openscad_gmk_sp_colours
 python3 kle2openscad.py
 ```
 
@@ -26,6 +24,13 @@ Then you can use all the colours as follows:
 color(GMK_CR) {
   ...
 }
+```
+Note the use of `include` and not `use` as the module needs to se the colour variables.
+
+If you're tracking your project in Git, it's probably best to add this repository as a submodule:
+```
+git submodule add https://github.com/piit79/openscad_gmk_sp_colours.git
+git submodule update --init
 ```
 
 ## Acknowledgements
